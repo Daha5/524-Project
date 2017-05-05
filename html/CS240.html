@@ -1,0 +1,803 @@
+<!DOCTYPE html><html xmlns:upElemTitle="http://xml.apache.org/xalan/java/org.jasig.portal.security.xslt.XalanLayoutElementTitleHelper" xmlns:dlm="http://www.uportal.org/layout/dlm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en-US"><head><title>MyUW</title><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black"/><meta name="description" content="MyUW"/><meta name="keywords" content="portal, uPortal, academic, higher education, open source, enterprise, JA-SIG, JASIG, Jasig"/><link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css"/><link href="/ResourceServingWebapp/rs/normalize/2.1.2/normalize-2.1.2.min.css" rel="stylesheet" type="text/css"/><link href="/ResourceServingWebapp/rs/fontawesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/><link href="/ResourceServingWebapp/rs/jqueryui/1.10.3/theme/smoothness/jquery-ui-1.10.3-smoothness.min.css" rel="stylesheet" type="text/css"/><link href="/portal/media/skins/bucky/uwMadison/less/uwMadisonTheme.css" rel="stylesheet" type="text/css"/><link href="/ResourceServingWebapp/rs/bootstrap-plugins/accessibility/1.0.2/css/bootstrap-accessibility.min.css" rel="stylesheet" type="text/css"/><script src="/ResourceServingWebapp/rs/modernizr/2.6.2/modernizr-2.6.2.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/jquery/1.10.2/jquery-1.10.2.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/jquery-migrate/jquery-migrate-1.2.1.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/jqueryui/1.10.3/jquery-ui-1.10.3.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/bootstrap/3.1.1/js/bootstrap.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/fluid/1.5.0/js/fluid-custom.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/underscore/1.5.2/underscore-1.5.2.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/jquery-plugins/noty/2.2.0/jquery.noty.packaged.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/datatables/1.9.4/media/js/jquery.dataTables.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/jquery-plugins/rating/1.0/bootstrap-rating-input.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/datatables/1.9.4/plugins/integration/bootstrap/3/dataTables.bootstrap.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/datatables/1.9.4/extras/column-filter-widgets/js/ColumnFilterWidgets.js" type="text/javascript"> </script><script src="/portal/rs/conflict-resolution/js/resolve-conflicts.min.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-util.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-portlet-registry.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-entity-registry.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-portlet-browser.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-layout-draggable-manager.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-layout-gallery.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-fragment-permissions-manager.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-subscription-browser.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-layout-selector.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-skin-selector.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-tab-manager.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-layout-persistence.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-url-provider.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-layout-preferences.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-autocomplete.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-showHideToggle.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/entity-selector.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-parameter-editor.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/flyout-nav.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-translator.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-sidebar-improved.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-print-plugin.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-ga.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-rating-option.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-favorite.js" type="text/javascript"> </script><script src="/portal/media/skins/common/javascript/uportal/up-config-lightbox.js" type="text/javascript"> </script><link rel="shortcut icon" href="/portal/favicon.ico" type="image/x-icon"/><script type="text/javascript">
+    var up = up || {};
+    up.jQuery = jQuery.noConflict(true);
+    up.fluid = fluid;
+    fluid = null;
+    fluid_1_4 = null;
+    up._ = _.noConflict();
+    up._.templateSettings = {
+      interpolate : /{{=(.+?)}}/g,
+      evaluate    : /{{(.+?)}}/g
+    };
+
+    (function($) {
+      $(function() {
+        var navMenuToggle = function() {
+          var menu = $(".portal-nav .menu"), menuToggle = $(".portal-nav .menu-toggle");
+          // Toggle the menu visibility when the button is clicked.
+          menuToggle.click(function() {
+            //alert("Handler for .click() called.");
+            menu.toggleClass("show");
+            return false;
+          });
+          // Console for debugging.
+          console.debug("menu", menu, "menuToggle", menuToggle);
+        }
+
+        navMenuToggle();
+      });
+    })(up.jQuery);
+  </script></head><body class="up dashboard portal fl-theme-mist detachedHeader"><div id="wrapper"><div class="portal-sticky-content" role="main"><div class="portal-container"><div class="row"><div id="portalPageBodyMessage" class="col-md-12"></div></div><div id="toolbar_" class="fl-widget-titlebar up-portlet-titlebar round-top"><a href="/portal" title="Return to Home" class="up-portlet-control return">Return to Home</a></div><content hasFavorites="false"><link href="/CampusCourseGuide/css/psEZZ9zImqTC6VVryiHy7g.aggr.min.css" rel="stylesheet" type="text/css"/><!--[if IE]> <link rel="stylesheet" type="text/css" href="/CampusCourseGuide/css/aN21GeOpJm9Y0s1NU7v4EA.aggr.min.css"/> <![endif]--><!--[if lt IE 9]> <link rel="stylesheet" type="text/css" href="/CampusCourseGuide/css/5G7Kd8dOCkEJ45N8KFZp8w.aggr.min.css"/> <![endif]--><script src="/ResourceServingWebapp/rs/jquery/1.6.1/jquery-1.6.1.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/jquery/form/2.28/jquery.form-2.28.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/jquery-plugins/cookie/1.0/jquery.cookie-1.0.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/jqueryui/1.8.13/jquery-ui-1.8.13.min.js" type="text/javascript"> </script><script src="/CampusCourseGuide/js/Rtcuy-lSgNFg-kO9CLo6oQ.aggr.min.js" type="text/javascript"> </script><!--[if lt IE 9]> <script type="text/javascript" src="/CampusCourseGuide/js/XO0u5xbC8Oj8yWAiWw-brw.aggr.min.js"></script> <![endif]--><noscript>
+    <link href="/CampusCourseGuide/css/6ApQ1X3WibbuupvBPMR-0A.aggr.min.css" rel="stylesheet" type="text/css"/></noscript>
+
+<script>
+    if(!cg.jQuery){cg.jQuery=jQuery.noConflict(true);if(typeof _!=="undefined"){_.noConflict();}if(typeof Backbone!=="undefined"){Backbone.noConflict();}cg.dataRefreshTimestampUrl="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/action.uP?pCm=view&pP_action=ajaxEnrollmentStatus&pP_type=getDataRefreshTimestamp";}else{cg.jQuery=jQuery.noConflict(true).extend(cg.jQuery);}cg.portletNamespace="Pluto_29_u360303l1n15_308298_tw_";setContextPath("/CampusCourseGuide");cg.contextPath="/CampusCourseGuide";</script>
+<div class="CG_detail">
+  <div class="CGDetailTitleWrap">
+    <div class="CGDetailTitle">
+
+      <div style="float:right;">
+        <ul class="CG_Logo">
+          <li><img src="/CampusCourseGuide/images/cgLogo.png"
+                   alt="my course guide logo" width="296" height="49" /></li>
+        </ul>
+      </div>
+
+      <h1 title="COMP SCI&nbsp;240: Introduction to Discrete Mathematics">COMP SCI&nbsp;240:&nbsp;<em>Introduction to Discrete Mathematics</em></h1>
+      
+      <p class="favadd">
+             Add to Plans/Favorites&nbsp;
+             <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=favoritesBrowse&pP_functionType=ADD&pP_courseID=011630&pP_subjectID=266&pP_termCode=1182" onclick="popUpWindow(this.href, '', 'scrollbars=1,resizable=1', 'width=700,height=550');return false;"
+                title="Add Introduction to Discrete Mathematics to Plan/Favorites">
+                 <img src="/CampusCourseGuide/images/addFavSm.gif"
+                      alt="Add Introduction to Discrete Mathematics to Plan/Favorites" width=16 height=18 />
+             </a>
+         </p>
+      <br />
+      
+      </div><div class="clearfloat"></div>
+    
+  </div><div class="CGDetailContentWrap">
+    <div class="CGDetailContent">
+      <table class="goSearch">
+          <tr>
+            <th>Go to Class Search: </th>    
+            <td>
+                    <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_action=section&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target="UW_CG_CS_2009" onClick="popUpWindow(this.href,'UW_CG_CS_2009','resizable=1,scrollbars=1');return false;">2017 Fall</a>
+                  </td>
+                </tr>
+        </table>
+      <div class="detail_container">
+        <div class="tableHeader">
+
+          <div class="catLinks">
+            <ul>
+              <li><a href="http://www.wisc.edu/grad/catalog/" target="_blank" onClick="popUpWindow(this.href,'','all');return false;"> Graduate Catalog</a></li>
+              <li><a href="http://www.wisc.edu/pubs/ug/" target="_blank" onClick="popUpWindow(this.href,'','all');return false;">Undergraduate Catalog</a></li>
+            </ul>
+          </div>
+
+          <h2>
+            Official Course Information
+            <a href="http://kb.wisc.edu/enrollment/page.php?id=9893" target="_blank" 
+               onClick="popUpWindow('http://kb.wisc.edu/enrollment/page.php?id=9893','','all');return false;">
+               <img src="/CampusCourseGuide/images/information.gif"
+                    alt="help with official course information"  
+                    title="help with official course information"/>
+            </a><br />
+            <i>(effective 2017 Fall)</i>
+            </h2>
+        </div>
+ 
+        <div class="clearfloat"></div>
+
+        <div class="tableContents">
+          <p><strong>Course Description:</strong>&nbsp;Basic concepts of logic, sets, partial order and other relations, and functions. Basic concepts of mathematics (definitions, proofs, sets, functions, and relations) with a focus on discrete structures: integers, bits, strings, trees, and graphs.  Propositional logic, Boolean algebra, and predicate logic. Mathematical induction and recursion. Invariants and algorithmic correctness. Recurrences and asymptotic growth analysis. Fundamentals of counting.</p>
+
+          <table class="leftTable">
+            <tr>
+              <td class="fieldTall">Course Designations:</td>
+              <td class="fieldInfo">
+                <strong>Level</strong> - Intermediate<br />
+                  <strong>Breadth</strong> - Natural Sciences<br />
+                  <strong>L&S Credit Type</strong> - C<br />
+                  </td>
+            </tr>
+            <tr>
+              <td class="field">Credit Range:</td>
+              <td class="fieldInfo">3</td>
+            </tr>
+            <tr>
+              <td class="fieldTall">Cross-Listed Subjects:</td>
+              <td class="fieldInfo">
+                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=courseDetail&pP_courseID=011630&pP_subjectId=266&pP_termCode=1182" target="_parent" title="COMPUTER SCIENCES">COMP SCI</a>, <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=courseDetail&pP_courseID=011630&pP_subjectId=600&pP_termCode=1182" target="_parent" title="MATHEMATICS">MATH</a></td>
+            </tr>
+            </table>
+
+          <table class="rightTable">
+            <tr>
+              <td class="field">Last Taught:</td>
+              <td class="fieldInfo">2017 Sprng</td>
+            </tr>
+            <tr>
+              <td class="field">Typically Offered:</td>
+              <td class="fieldInfo">Fall, Spring</td>
+            </tr>
+            <tr>
+              <td class="fieldTall">Prerequisites:</td>
+              <td class="fieldInfo">Math 221</td>
+            </tr>
+          </table>
+     
+          <div class="clearfloat"></div>
+        </div> </div>
+
+      <p><a name="DEPT"> </a></p>
+
+      <div class="detail_container">
+        <div class="tableHeader"><h2>Department Information</h2></div>
+        <div class="tableContents" >      
+          <table class="leftTable">
+            <tr>
+              <td class="field">Website:</td>
+              <td class="fieldInfo">
+                <a href="http://www.cs.wisc.edu/" target="_blank" onClick="popUpWindow(this.href,'','all');return false;">http://www.cs.wisc.edu/</a>
+                </td>     
+            </tr>
+            <tr>
+              <td class="field">School/College:</td>
+              <td class="fieldInfo">
+                <a href="http://www.ls.wisc.edu/" target="_blank" onClick="popUpWindow(this.href,'','all');return false;">Letters and Science, College of</a>
+                </td>
+            </tr>
+          </table>
+          
+          <table class="rightTable">
+            <tr>
+              <td class="field">COMPUTER SCIENCES Catalog &amp; Contact Information:</td>
+              <td class="fieldInfoTall">
+                <a href="http://pubs.wisc.edu/ug/ls_compsci.htm" target="_blank" onClick="popUpWindow(this.href,'','all');return false;">Undergraduate</a>
+                <a href="http://grad.wisc.edu/catalog/degrees_compsci.htm" target="_blank" onClick="popUpWindow(this.href,'','all');return false;">Graduate</a>
+                </td>
+            </tr>
+          </table>
+        </div>
+        
+        <div class="clearfloat"></div>
+      </div> <div class="detail_container">
+        <a name="Detail_display_Pluto_29_u360303l1n15_308298_tw_" style="position:absolute;top:-100px;">&nbsp;</a>
+        <div class="tableHeader"><h2>Section Information</h2></div>
+        <div class="tableContents" >
+          <script type="text/javascript">
+    cg.jQuery(function(){var a=cg.jQuery;a(document).ready(function(){a("#selectTermButtonPluto_29_u360303l1n15_308298_tw_").click(function(c){var b=a("#termChoiceSelect_Pluto_29_u360303l1n15_308298_tw_ option:selected").val();if(b!==""){window.location.href=b;}});});});</script>
+
+<div id="termChoice_Pluto_29_u360303l1n15_308298_tw_" class="termChoiceForm">
+  <p class="curTerm">Currently Viewing Fall 2017-2018</p>
+  <p class="termChoice">Choose Term: </p>
+  <select id="termChoiceSelect_Pluto_29_u360303l1n15_308298_tw_" size="1">
+    <option value="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=courseDetail&pP_courseID=011630&pP_subjectId=266&pP_termCode=1174#Detail_display_Pluto_29_u360303l1n15_308298_tw_" >Spring 2016-2017</option>
+    <option value="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=courseDetail&pP_courseID=011630&pP_subjectId=266&pP_termCode=1176#Detail_display_Pluto_29_u360303l1n15_308298_tw_" >Summer 2017</option>
+    <option value="" selected="selected">Fall 2017-2018</option>
+    </select>                  
+  <button id="selectTermButtonPluto_29_u360303l1n15_308298_tw_">Go!</button>
+</div>
+<p class="CGsectionTableNote">Information last updated at <span class="dataRefreshTimestamp">06:00AM Apr 04, 2017</span>.</p>
+          <script type="text/javascript">
+            cg.jQuery(function(c){var a=c(".CG_detail");var b=cg.appendDivWithClass(a,"courseDetailsErrorDialog").cgDialog({});cg.initializeLiveSeatWarning(a,b);});</script>
+        <p class="CGsectionTableNote">Click on a section to view details in class search.</p>
+        <div class="Detail_display">
+            <div class="CGsectionTable">
+                <div class="termSections_1182_Pluto_29_u360303l1n15_308298_tw_">
+                    <table class="sectionDetailList">
+                        <tr>
+                            <th title="Class Number">Class No.</th>
+                            <th title="Section Number">Section No.</th>
+                            <th>Session</th>
+                            <th>Day/Time</th>
+                            <th>Location</th>
+                            <th>Instructor</th>
+                            <th>Cr</th>
+                            <th>Additional Info.</th>
+                            <th colspan="2" class="seatCount">
+                                Seats
+                                <div class="liveDataStatus">
+                                    </div>
+                            </th>
+                        </tr>
+
+                        <tr class="sectionNote ListRow inline detailsClassSection" >
+                                            <td>
+                                                &nbsp;</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=001&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>LEC&nbsp;001</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                MWF&nbsp;11:00-11:50AM</td>
+
+                                            <td>
+                                                2650&nbsp;Mosse Humanities Building</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_pvi=UW011M216&pP_action=instructorDetail" class="CG_instructorDetailsLink">HASTI, Beck</a>
+                                                    </td>
+
+                                            <td>
+                                                3</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=53065&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_1Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                <a  href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_action=examInfo&pP_courseId=011630&pP_classNumber=53065&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=350');return false;"><img class="examInfo" id="exam_1182_1Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/pencil.png" alt="Exam info" title="Exam info"/></a></td>
+
+                                            <td></td>
+                                                    <td></td>
+                                                </tr>
+                                    <tr class="ListRow inline detailsClassSection" data-enrollmentPackageId="001-310">
+                                            <td>
+                                                53066</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=310&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;310</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                T&nbsp;8:50-9:40AM</td>
+
+                                            <td>
+                                                1207&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=53066&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        30</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRowHighlight inline detailsClassSection" data-enrollmentPackageId="001-311">
+                                            <td>
+                                                53067</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=311&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;311</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                R&nbsp;8:50-9:40AM</td>
+
+                                            <td>
+                                                1207&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=53067&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        29</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRow inline detailsClassSection" data-enrollmentPackageId="001-312">
+                                            <td>
+                                                53068</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=312&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;312</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                T&nbsp;9:55-10:45AM</td>
+
+                                            <td>
+                                                1207&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=53068&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        30</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRowHighlight inline detailsClassSection" data-enrollmentPackageId="001-313">
+                                            <td>
+                                                53069</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=313&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;313</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                R&nbsp;9:55-10:45AM</td>
+
+                                            <td>
+                                                1207&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=53069&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        30</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRow inline detailsClassSection" data-enrollmentPackageId="001-314">
+                                            <td>
+                                                60309</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=314&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;314</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                T&nbsp;11:00-11:50AM</td>
+
+                                            <td>
+                                                1289&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=60309&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        30</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRowHighlight inline detailsClassSection" data-enrollmentPackageId="001-315">
+                                            <td>
+                                                65864</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=315&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;315</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                R&nbsp;11:00-11:50AM</td>
+
+                                            <td>
+                                                38&nbsp;Agricultural Hall</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=65864&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        0</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="CLOSED">
+                                                        <img id="closedSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/redDot.png"
+                                                                     alt="Closed section" title="Closed section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRow inline detailsClassSection" data-enrollmentPackageId="001-316">
+                                            <td>
+                                                65865</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=316&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;316</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                T&nbsp;9:55-10:45AM</td>
+
+                                            <td>
+                                                1289&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=65865&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        0</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="CLOSED">
+                                                        <img id="closedSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/redDot.png"
+                                                                     alt="Closed section" title="Closed section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="sectionNote ListRow inline detailsClassSection" >
+                                            <td>
+                                                &nbsp;</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=002&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>LEC&nbsp;002</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                MWF&nbsp;1:20-2:10PM</td>
+
+                                            <td>
+                                                132&nbsp;Noland Zoology Building</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_pvi=UW011M216&pP_action=instructorDetail" class="CG_instructorDetailsLink">HASTI, Beck</a>
+                                                    </td>
+
+                                            <td>
+                                                3</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=59304&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_1Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                <a  href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_action=examInfo&pP_courseId=011630&pP_classNumber=59304&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=350');return false;"><img class="examInfo" id="exam_1182_1Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/pencil.png" alt="Exam info" title="Exam info"/></a></td>
+
+                                            <td></td>
+                                                    <td></td>
+                                                </tr>
+                                    <tr class="ListRowHighlight inline detailsClassSection" data-enrollmentPackageId="002-320">
+                                            <td>
+                                                60310</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=320&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;320</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                R&nbsp;11:00-11:50AM</td>
+
+                                            <td>
+                                                1289&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=60310&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        30</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRow inline detailsClassSection" data-enrollmentPackageId="002-321">
+                                            <td>
+                                                60311</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=321&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;321</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                T&nbsp;12:05-12:55PM</td>
+
+                                            <td>
+                                                1289&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=60311&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        30</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRowHighlight inline detailsClassSection" data-enrollmentPackageId="002-322">
+                                            <td>
+                                                60312</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=322&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;322</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                R&nbsp;12:05-12:55PM</td>
+
+                                            <td>
+                                                1289&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=60312&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        30</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRow inline detailsClassSection" data-enrollmentPackageId="002-323">
+                                            <td>
+                                                60313</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=323&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;323</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                T&nbsp;1:20-2:10PM</td>
+
+                                            <td>
+                                                1289&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=60313&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        30</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRowHighlight inline detailsClassSection" data-enrollmentPackageId="002-324">
+                                            <td>
+                                                60314</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=324&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;324</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                R&nbsp;1:20-2:10PM</td>
+
+                                            <td>
+                                                1289&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=60314&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        29</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRow inline detailsClassSection" data-enrollmentPackageId="002-325">
+                                            <td>
+                                                62141</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=325&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;325</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                T&nbsp;2:25-3:15PM</td>
+
+                                            <td>
+                                                1289&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=62141&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        30</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    <tr class="ListRowHighlight inline detailsClassSection" data-enrollmentPackageId="002-326">
+                                            <td>
+                                                62142</td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_sessionCode=A1&pP_action=section&pP_section=326&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" target='UW_CG_CS_2009' onClick="popUpWindow(this.href,'UW_CG_CS_2009', 'resizable=1,scrollbars=1');return false;">
+                                                    <strong>DIS&nbsp;326</strong>
+                                                </a>
+                                                </td>
+
+                                            <td><span class="sessionCode" title="Sep 06 - Dec 13, 2017">Regular</span></td>
+                                                <td class="ListTime">
+                                                R&nbsp;2:25-3:15PM</td>
+
+                                            <td>
+                                                1207&nbsp;Computer Sciences and Statistics</td>
+
+                                            <td>
+                                                </td>
+
+                                            <td>
+                                                
+                                                        &nbsp;
+                                                    </td>
+
+                                            <td>
+                                                <a href="/portal/f/u360303l1s4/p/CourseGuide-Browse-Courses.u360303l1n15/detached/render.uP?pCm=view&pP_topicId=0&pP_action=designationsAndNotes&pP_classNumber=62142&pP_courseId=011630&pP_subjectId=266&pP_termCode=1182" onClick="popUpWindow(this.href,'','scrollbars=1,resizable=1','width=580,height=650');return false;"><img id="designations_1182_2Pluto_29_u360303l1n15_308298_tw_" src="/CampusCourseGuide/images/notes.png" alt="Designations and notes" title="Designations and notes"></a>
+                                                </td>
+
+                                            <td class="openSeatCount">
+                                                        30</td>
+                                                    <td class="openSeatStatus" data-enrollmentStatus="OPEN">
+                                                        <img id="openSectionIcon2Pluto_29_u360303l1n15_308298_tw_"
+                                                                     src="/CampusCourseGuide/images/greenDot.png"
+                                                                     alt="Open section" title="Open section" />
+                                                            </td>
+                                                </tr>
+                                    </table>
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+        </div>
+    </div>
+      </div> </div> </div> <div class="footer">
+  <p><a href="mailto:courseguidefeedback@em.wisc.edu?subject=CG Feedback: courseDetail.jsp - &body=Do not remove this line: user-agent is Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0%0d%0dPlease add your results (errors found, suggestions, comments) here:%0d">Feedback (courseguidefeedback@em.wisc.edu)</a> | <a href="http://kb.wisc.edu/enrollment" target="CG_HELP_WIN"  onClick="popUpWindow(this.href,'CG_HELP_WIN', 'resizable=1,scrollbars=1');return false;">Help»</a></p>
+</div>
+</div>
+</content></div></div></div><script type="text/javascript">
+        up.analytics = up.analytics || {};
+        up.analytics.host = 'my.wisc.edu';
+        up.analytics.portletData = {"29_u360303l1n15_308298.tw":{"fname":"CourseGuide-Browse-Courses","executionTimeNano":74045}};
+        up.analytics.pageData = {"urlState":"DETACHED","executionTimeNano":14513531,"tab":{"id":791,"fragmentName":"mum-lo-bucky-welcome","tabName":"UW Bucky Home","displayString":"UW Bucky Home (mum-lo-bucky-welcome)"}};
+        </script></body></html>
